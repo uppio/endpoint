@@ -1,5 +1,5 @@
 {
-  "name": "lab-http",
+  "name": "endpoint",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,17 +8,18 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "microbundle": "^0.15.1",
     "prettier": "^3.2.5",
-    "turbo": "latest"
+    "rimraf": "^5.0.7",
+    "turbo": "latest",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12"
   },
   "engines": {
     "node": ">=18"
   },
   "packageManager": "yarn@1.22.21",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ]
 }

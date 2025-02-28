@@ -1,0 +1,46 @@
+{
+  "name": "@uppio/endpoint-client-mock",
+  "version": "0.0.0",
+  "description": "Mock service for endpoint-client package",
+  "private": false,
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "require": "./build/index.js",
+    "default": "./build/index.module.js"
+  },
+  "main": "build/index.js",
+  "module": "build/index.module.js",
+  "types": "build/index.d.ts",
+  "browserslist": [
+    "last 1 year"
+  ],
+  "minify": {
+    "mangle": false
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run test",
+    "build": "microbundle"
+  },
+  "author": {
+    "name": "uppio",
+    "email": ""
+  },
+  "license": "MIT",
+  "keywords": [],
+  "files": [
+    "/build",
+    "/package.json"
+  ],
+  "peerDependencies": {
+    "@uppio/endpoint": "0.0.0"
+  },
+  "dependencies": {
+    "type-fest": "^4.34.0",
+    "@uppio/endpoint-client": "0.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.5"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@uppio/endpoint-client",
+  "version": "0.0.0",
+  "description": "HTTP client for endpoint package",
+  "private": false,
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "require": "./build/index.js",
+    "default": "./build/index.module.js"
+  },
+  "main": "build/index.js",
+  "module": "build/index.module.js",
+  "types": "build/index.d.ts",
+  "browserslist": [
+    "last 1 year"
+  ],
+  "minify": {
+    "mangle": false
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run test",
+    "build": "microbundle"
+  },
+  "author": {
+    "name": "uppio",
+    "email": ""
+  },
+  "license": "MIT",
+  "keywords": [],
+  "files": [
+    "/build",
+    "/package.json"
+  ],
+  "peerDependencies": {
+    "@uppio/endpoint": "0.0.0"
+  },
+  "dependencies": {
+    "type-fest": "^4.34.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.5"
+  }
+}

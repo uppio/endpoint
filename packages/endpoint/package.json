@@ -1,0 +1,36 @@
+{
+  "name": "@uppio/endpoint",
+  "version": "0.0.0",
+  "description": "A definition of the endpoint for client-service interaction",
+  "private": false,
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "require": "./build/index.js",
+    "default": "./build/index.module.js"
+  },
+  "main": "build/index.js",
+  "module": "build/index.module.js",
+  "types": "build/index.d.ts",
+  "browserslist": [
+    "last 1 year"
+  ],
+  "minify": {
+    "mangle": false
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run test",
+    "build": "microbundle"
+  },
+  "author": {
+    "name": "uppio",
+    "email": ""
+  },
+  "license": "MIT",
+  "keywords": [],
+  "files": [
+    "/build",
+    "/package.json"
+  ]
+}
